@@ -1,0 +1,47 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    Date: "Actualmente ...",
+    Title: "E-Commerce Manager - La Previa",
+    Description:
+      " Me encargo de la transformación Digital de Pymes y Emprendedores. A través de la creación de E-Commerce, Marketing Digital y Data Analysis.",
+    Link: "#",
+  },
+  {
+    Date: "Actualmente ...",
+    Title: "Estudiante de Programación - Instituto Ciisa",
+    Description:
+      "Estudio Programación y Análisis de Sistemas en el Instituto Ciisa.",
+    Link: "#",
+  },
+  {
+    Date: "Noviembre 2017 - Febrero 2022",
+    Title: "Administrador Club XS, Temuco - Casino Dreams",
+    Description: ".",
+    Link: "#",
+  },
+  {
+    Date: "Enero 2015 - Febrero 2022",
+    Title: "Marketing Digital Club XS, Temuco - Casino Dreams",
+    Description: ".",
+    Link: "#",
+  },
+  {
+    Date: "Marzo 2009 - Diciembre 2014",
+    Title: "Estudiante Medicina - Universidad Autonoma de Chile",
+    Description: "Estudios incompletos en la ciudad de Talca, Chile.",
+    Link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

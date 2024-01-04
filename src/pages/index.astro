@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import DigitalGardenIcon from "../components/icons/DigitalGarden.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import DeviceImacCodeIcon from "../components/icons/device-imac-code.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de Felipe - Desarrollador y Programador Web - Data Analyst - E-commerce"
+  description="Portfolio de Felipe Morales Roa, Desarrollador y Programador Web, Data Analyst y E-commerce Manager. Actualmente resido en Temuco, Chile."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/145734904?v=4"
+        alt="felipe photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Felipe
+        <a
+          href="https://www.linkedin.com/in/felipe-morales-roa-556901220/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Estudiante de Programación</Badge>
+        </a>
+      </h1>
+
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>Estudiante de Programación y Analisis de Sistemas.</span>
+        <span class="text-yellow-200/90">
+          Desarrollador Web, Data Analyst y E-commerce Manager.
+        </span>
+        <span class="text-red-200/90">
+          Actualmente resido en Temuco, Chile.</span
+        ><span class="opacity-75"></span>
+         Soluciones únicas para problemas complejos.
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/felipe-morales-roa-556901220/"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/felipeDev303/">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </SocialPill>
+        <SocialPill href="mailto:felipemoralesroa@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+           felipemoralesroa@gmail.com
+        </SocialPill>
+        <SocialPill href="https://felipemorales-digital-garden.vercel.app/">
+          <DigitalGardenIcon class="size-4 md:size-6" />
+           Digital Garden
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+         Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <DeviceImacCodeIcon class="size-7" />
+         Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

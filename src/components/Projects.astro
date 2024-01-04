@@ -1,0 +1,60 @@
+---
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import JAVASCRIPT from "./icons/JS.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-500 text-whithe",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-500 text-white",
+    icon: CSS,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-white",
+    icon: JAVASCRIPT,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Cumbres Expediciones",
+    description: "Página web para una agencia de turismo",
+    link: "#",
+    github: "https://github.com/felipeDev303/Cumbres-Expediciones",
+    image: "/projects/cumbres.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
